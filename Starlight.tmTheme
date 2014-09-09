@@ -27,6 +27,7 @@
                     <string>#CAE2FB3D</string>
                     <!-- Linha selecionada -->
                     <key>lineHighlight</key>
+                    <!-- <string>#FFFFFF16</string> -->
                     <string>#FFFFFF0D</string>
                     <!-- Conteudo selecionado -->
                     <key>selection</key>
@@ -59,25 +60,6 @@
                     <!--  -->
                     <key>findHighlight</key>
                     <string>#FFE792</string>
-<!--
-                    <key>findHighlightForeground</key>
-                    <string>red</string>
- -->
-                    <key>bracketsForeground</key>
-                    <string>magenta</string>
-
-                    <key>bracketsOptions</key>
-                    <string>italic</string>
-
-                    <key>bracketContentsForeground</key>
-                    <!-- <string>#F8F8F2A5</string> -->
-                    <string>orange</string>
-
-                    <key>bracketContentsOptions</key>
-                    <string>italic</string>
-
-                    <key>tagsOptions</key>
-                    <string>italic</string>
                 </dict>
             </dict>
 
@@ -273,8 +255,7 @@
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <!-- <string>purple</string> -->
-                    <string>#6F40AE</string>
+                    <string>#7F50BE</string>
                 </dict>
             </dict>
 
@@ -350,7 +331,7 @@
                 <key>name</key>
                 <string>Operators</string>
                 <key>scope</key>
-                <string>keyword.operator, keyword.operator.js, keyword.operator.star</string>
+                <string>keyword.operator, keyword.operator.js, keyword.operator.star, meta.selector.css</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
@@ -364,12 +345,27 @@
                 <key>name</key>
                 <string>Assignment</string>
                 <key>scope</key>
-                <string>keyword.operator.assignment, keyword.operator.key</string>
+                <string>keyword.operator.assignment, keyword.operator.key, keyword.operator.increment-decrement, keyword.operator.arithmetic</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#80D500</string>
+                    <!-- <string>#80D500</string> -->
+                    <string>#00BD38</string>
                     <!-- <string>#6969FA</string> -->
+                </dict>
+            </dict>
+
+
+            <dict>
+                <key>name</key>
+                <string>String concatenation</string>
+                <key>scope</key>
+                <string>keyword.operator.string</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <!-- <string>#80D500</string> -->
+                    <string>#6969FA</string>
                 </dict>
             </dict>
 
@@ -377,7 +373,7 @@
                 <key>name</key>
                 <string>Terminator</string>
                 <key>scope</key>
-                <string>punctuation.terminator</string>
+                <string>punctuation.terminator, meta.delimiter.method.period</string>
                 <key>settings</key>
                 <dict>
                     <key>fontStyle</key>
@@ -396,18 +392,6 @@
                 <dict>
                     <key>foreground</key>
                     <string>#EC7600</string>
-                </dict>
-            </dict>
-
-            <dict>
-                <key>name</key>
-                <string>Parametros</string>
-                <key>scope</key>
-                <string>variable.parameter, meta.function.argument, meta.function.arguments, text.html.basic source.php.embedded.block.html meta.function.php meta.function.arguments.php meta.function.argument.no-default.php variable.other.php </string>
-                <key>settings</key>
-                <dict>
-                    <key>fontStyle</key>
-                    <string>italic</string>
                 </dict>
             </dict>
 
@@ -469,7 +453,8 @@
                 <key>name</key>
                 <string>functions, methods</string>
                 <key>scope</key>
-                <string>support.function, meta.function-name, entity.name.function, meta.function-call</string>
+                <string>meta.function-name, entity.name.function, meta.function-call</string>
+                <!-- <string>support.function, meta.function-name, entity.name.function, meta.function-call</string> -->
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
@@ -740,28 +725,41 @@
 
             <dict>
                 <key>name</key>
-                <string>Class</string>
+                <string>Class operators, Class</string>
                 <key>scope</key>
                 <!-- <string>support.class, meta.class.php entity.name.type.class.php, meta.class.php entity.other.inherited-class.php</string> -->
-                <string>support.type, support.class, meta.class, entity.name.type.class, entity.other.inherited-class</string>
+                <string>keyword.operator.class, support.type, support.class, meta.class, entity.name.type.class, entity.other.inherited-class</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#A535AE</string>
-                    <!-- <string>#AE81FF</string> -->
-                    <!-- <string>purple</string> -->
+                    <string>purple</string>
+                </dict>
+            </dict>
+
+
+            <dict>
+                <key>name</key>
+                <string>new</string>
+                <key>scope</key>
+                <string>keyword.other.new</string>
+                <key>settings</key>
+                <dict>
+                    <key>foreground</key>
+                    <!-- <string>#A535AE</string> -->
+                    <string>#AE81FF</string>
                 </dict>
             </dict>
 
             <dict>
                 <key>name</key>
-                <string>PHP: Class atributes</string>
+                <string>PHP: Class atributes, class keyword</string>
                 <key>scope</key>
-                <string>variable.other.property</string>
+                <string>variable.other.property, storage.type.class</string>
                 <key>settings</key>
                 <dict>
                     <key>foreground</key>
-                    <string>#C8E4FD</string>
+                    <string>#AE81FF</string>
+                    <!-- <string>#C8E4FD</string> -->
                 </dict>
             </dict>
 
@@ -947,20 +945,6 @@
 
             <dict>
                 <key>name</key>
-                <string>Preprocessor Line</string>
-                <key>scope</key>
-                <string>meta.preprocessor</string>
-                <key>settings</key>
-                <dict>
-                    <key>fontStyle</key>
-                    <string></string>
-                    <key>foreground</key>
-                    <string>#2F006E</string>
-                </dict>
-            </dict>
-
-            <dict>
-                <key>name</key>
                 <string>Exceptions</string>
                 <key>scope</key>
                 <string>keyword.exception, support.class.exception, support.type.exception</string>
@@ -989,28 +973,13 @@
 
             <dict>
                 <key>name</key>
-                <string>function.section</string>
+                <string>Parametro obrigatorio</string>
                 <key>scope</key>
-                <string>meta.function.section</string>
+                <string>meta.function.arguments.php meta.function.argument.default, meta.function.argument.default</string>
                 <key>settings</key>
                 <dict>
                     <key>background</key>
-                    <string>#371D28</string>
-                </dict>
-            </dict>
-            <dict>
-                <key>name</key>
-                <string>function.section</string>
-                <key>scope</key>
-                <string>meta.function.argument.default</string>
-                <key>settings</key>
-                <dict>
-                    <key>background</key>
-                    <string>#371D28</string>
-                    <key>fontStyle</key>
-                    <string></string>
-                    <key>foreground</key>
-                    <string>#89BDFF</string>
+                    <string>#000000</string>
                 </dict>
             </dict>
 
